@@ -1,0 +1,34 @@
+ACCELERATE_CONFIG="./training/configs/default_config.yaml"
+
+accelerate launch --config_file $ACCELERATE_CONFIG --num_processes=2 --main_process_port 5323 ./training/train_icd_sd15_lora.py \
+    --pretrained_teacher_model="runwayml/stable-diffusion-v1-5" \
+    --output_dir="fine_tune_results" \
+    --mixed_precision=fp16 \
+    --resolution=512 \
+    --lora_rank=64 \
+    --learning_rate=8e-6 --loss_type="lpips" --adam_weight_decay=0.0 \
+    --max_train_steps=6000 \
+    --validation_steps=50 \
+    --evaluation_steps=50 \
+    --checkpointing_steps=100 --checkpoints_total_limit=10 \
+    --train_batch_size=4 \
+    --allow_tf32 \
+    --gradient_checkpointing \
+    --gradient_accumulation_steps=1 \
+    --resume_from_checkpoint=latest \
+    --report_to=wandb \
+    --seed=453645634 \
+    --coco_path "./training/data" \
+    --num_endpoints 4 \
+    --num_forward_endpoints 4 \
+    --start_forward_timestep 19 \
+    --reverse_preserve_loss_coef 1.5 \
+    --forward_preserve_loss_coef 1.5 \
+    --cfg_distill_teacher_path "./checkpoints/sd15_cfg_distill.pt" \
+    --forward_model_path "./checkpoints/iCD-SD15-forward_19_259_519_779.safetensors" \
+    --backward_model_path "./checkpoints/iCD-SD15-reverse_259_519_779_999.safetensors" \
+    --embed_guidance \
+    --discrete_w "0" \
+    --endpoints "0,259,519,779" \
+    --forward_endpoints "259,519,779,999" \
+    --cycle_loss_c 1
