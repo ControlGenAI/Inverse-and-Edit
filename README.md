@@ -75,3 +75,4 @@ This repository primarily based on
 - [Guide-and-Rescale](https://github.com/AIRI-Institute/Guide-and-Rescale/tree/main)
 
 ## Citation
+Preprint will be awailable soon.
