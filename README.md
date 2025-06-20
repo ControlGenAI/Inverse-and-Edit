@@ -1,4 +1,5 @@
 # Inverse-and-Edit
+<a href="https://colab.research.google.com/drive/1GmJCTiVqbNtM-cl1Cl9jykFlwZqOiyQa?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>
 [![License](https://img.shields.io/github/license/AIRI-Institute/al_toolbox)](./LICENSE)
 
 This is the official implementation of "Inverse-and-Edit: Effective and Fast Image Editing by Cycle Consistency Models"
