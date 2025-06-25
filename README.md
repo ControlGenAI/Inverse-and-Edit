@@ -1,4 +1,5 @@
-# Inverse-and-Edit
+# Inverse-and-Edit: Effective and Fast Image Editing by Cycle Consistency Models
+<a href="https://arxiv.org/abs/2506.19103"><img src="https://img.shields.io/badge/arXiv-2506.19103-b31b1b.svg" height=22.5><a>
 <a href="https://colab.research.google.com/drive/1GmJCTiVqbNtM-cl1Cl9jykFlwZqOiyQa?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>
 [![License](https://img.shields.io/github/license/AIRI-Institute/al_toolbox)](./LICENSE)
 
@@ -76,4 +77,15 @@ This repository primarily based on
 - [Guide-and-Rescale](https://github.com/AIRI-Institute/Guide-and-Rescale/tree/main)
 
 ## Citation
-Preprint will be awailable soon.
+
+```bibtex
+@misc{beletskii2025inverseandediteffectivefastimage,
+      title={Inverse-and-Edit: Effective and Fast Image Editing by Cycle Consistency Models}, 
+      author={Ilia Beletskii and Andrey Kuznetsov and Aibek Alanov},
+      year={2025},
+      eprint={2506.19103},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2506.19103}, 
+}
+```
